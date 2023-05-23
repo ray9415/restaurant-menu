@@ -4,7 +4,7 @@ namespace restaurant.Controllers
 {
     public class MenuController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Menu()
         {
             return View();
         }
