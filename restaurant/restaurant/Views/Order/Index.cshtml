@@ -4,15 +4,31 @@
 @{
 }
 <div class="container">
-    <table class="table table-striped">
-        <thead >
-            <tr>
-                <th>項次</th>
-                <th>品名</th>
-                <th>數量</th>
-                <th></th>
-
-            </tr>
-        </thead>
-    </table>
+    <form>
+        <label>桌號：
+            <select class="form-control">
+                <option>1</option>
+            </select>
+        </label>
+        <hr />
+    
+        <table class="table table-striped">
+            <thead >
+                <tr>
+                    <th>品名</th>
+                    <th>單價</th>
+                    <th>數量</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>炒飯</td>
+                    <td>70</td>
+                    <td>2</td>
+                    <td><a href="#" class="btn btn-danger">刪除</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
 </div>
