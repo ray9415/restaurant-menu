@@ -21,6 +21,6 @@ namespace restaurant.Models
         [DisplayName("連絡電話")]
         public string phoneNo { get; set; }
 
-        public List<OrderDetail> Details { get; set; }
+        public List<OrderDetail> OrderDetails { get; set; }
     }
 }

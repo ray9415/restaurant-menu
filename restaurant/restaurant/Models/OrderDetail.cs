@@ -6,6 +6,6 @@ namespace restaurant.Models
 {
     public class OrderDetail
     {
-
+        public int OrderId { get; set; }
     }
 }
