@@ -7,6 +7,7 @@ namespace restaurant.Models
 {
     public class Product
     {
+        [Key]
         public int ProductId { get; set; }
 
         [DisplayName("商品名稱")]

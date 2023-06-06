@@ -9,7 +9,7 @@ namespace restaurant.Models
     {
         public int Id { get; set; }
 
-        public DateTime DateTime { get; set; }
+        public DateTime DateTime { get; set; } = DateTime.Now;
 
         public int Table { get; set; }
 
@@ -19,7 +19,10 @@ namespace restaurant.Models
 
         [Required(ErrorMessage = "必填欄位")]
         [DisplayName("連絡電話")]
-        public string phoneNo { get; set; }
+        public string PhoneNo { get; set; }
+
+        [DisplayName("備註")]
+        public string statement { get; set; }
 
         public List<OrderDetail> OrderDetails { get; set; }
     }

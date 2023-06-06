@@ -16,8 +16,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Area\Management\Controllers\" />
-    <Folder Include="Area\Management\Views\" />
+    <Folder Include="Areas\Front\Controllers\" />
+    <Folder Include="Areas\Front\Data\" />
+    <Folder Include="Areas\Front\Models\" />
+    <Folder Include="Areas\Front\Views\" />
+    <Folder Include="Areas\ProductManager\Controllers\" />
+    <Folder Include="Areas\ProductManager\Data\" />
+    <Folder Include="Areas\ProductManager\Models\" />
+    <Folder Include="Areas\ProductManager\Views\" />
   </ItemGroup>
 
 </Project>
