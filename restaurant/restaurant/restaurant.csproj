@@ -20,7 +20,6 @@
     <Folder Include="Areas\Front\Models\" />
     <Folder Include="Areas\ProductManager\Data\" />
     <Folder Include="Areas\ProductManager\Models\" />
-    <Folder Include="Areas\ProductManager\Views\" />
   </ItemGroup>
 
 </Project>
