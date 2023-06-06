@@ -11,7 +11,7 @@ namespace restaurant.Models
         public int ProductId { get; set; }
 
         [DisplayName("商品名稱")]
-        [Required(ErrorMessage ="品名不可為空")]
+        [Required(ErrorMessage = "品名不可為空")]
         public string Name { get; set; }
 
         [DisplayName("類型")]

@@ -16,20 +16,28 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\文件\GitHub\restaurant-menu\restaurant\restaurant
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/Front/Views/Menu/Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnJvbnRcVmlld3NcTWVudVxNZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/Front/Views/Order/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnJvbnRcVmlld3NcT3JkZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/Front/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnJvbnRcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/Front/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnJvbnRcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Menu/Menu.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxNZW51LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Order/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Shared/Error.cshtml]
