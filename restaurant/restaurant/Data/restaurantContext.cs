@@ -10,7 +10,11 @@ namespace restaurant.Data
         {
         }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Order> Orders { get; set; }    
-        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<Order> Orders { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<OrderDetail>().HasKey(od => new {od.OrderId,od.ProductId});
+        }
     }
 }

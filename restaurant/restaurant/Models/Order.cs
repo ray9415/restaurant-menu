@@ -7,6 +7,7 @@ namespace restaurant.Models
 {
     public class Order
     {
+        [Key]
         public int Id { get; set; }
 
         public DateTime DateTime { get; set; } = DateTime.Now;
