@@ -8,18 +8,17 @@ namespace restaurant.Models
 {
     public class OrderDetail
     {
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //[Key]
-        public int OrderId { get; set; }
 
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        //[Key]
+        public int Id { get; set; }
+
         public int ProductId { get; set; }
-
-
         public int Quantity { get; set; }
-
-
         public int Price { get; set; }
+
+        [ForeignKey("OrderId")]
+        public virtual Order Order { get; set; }
+
+        [ForeignKey("ProductId")]
+        public virtual Product Product { get; set; }
     }
 }

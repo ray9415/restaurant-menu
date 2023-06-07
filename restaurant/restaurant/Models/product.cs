@@ -26,6 +26,5 @@ namespace restaurant.Models
         [DisplayName("圖片")]
         public string IMG { get; set; }
 
-        public List<Product> Products { get; set;}
     }
 }

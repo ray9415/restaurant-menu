@@ -14,7 +14,7 @@ namespace restaurant.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<OrderDetail>().HasKey(od => new {od.OrderId,od.ProductId});
+            modelBuilder.Entity<OrderDetail>().HasKey(od => new {od.Id,od.ProductId});
         }
     }
 }
