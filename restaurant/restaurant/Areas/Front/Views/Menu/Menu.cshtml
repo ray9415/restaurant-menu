@@ -2,14 +2,21 @@
 @{
     ViewData["title"] = "商品介紹";
 }
-
+@section Styles
+{
+    <style>
+        #card-img{
+            max-height:200px;
+        }
+    </style>
+}
 <div class="container">
     <div class=" row">
         @foreach( var item in Model){
-            <div class="col-sm-4 d-flex align-items-stretch">
+            <div class="col-sm-4 d-flex">
                 <div class="card">
                     <div class="card-body">
-                        <img class="card-img-top " src="~/imgs/@item.IMG" />
+                        <img id="card-img" class="card-img-top " src="~/imgs/@item.IMG" />
                         <h5 class="card-title">@item.Name</h5>
                         <p class="card-text">@item.Description</p>
                         <a href="#" class="btn btn-primary">加入</a>
