@@ -6,14 +6,15 @@
 {
     <style>
         #card-img{
-            max-height:200px;
+            max-height: 250px;
+            max-width: 250px;
         }
     </style>
 }
 <div class="container">
     <div class=" row">
         @foreach( var item in Model){
-            <div class="col-sm-4 d-flex">
+            <div class="col-sm-3 d-flex">
                 <div class="card">
                     <div class="card-body">
                         <img id="card-img" class="card-img-top " src="~/imgs/@item.IMG" />
