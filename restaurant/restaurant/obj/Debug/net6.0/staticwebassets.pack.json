@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\IMGs\\parfait.jpg"
     },
     {
+      "Id": "D:\\文件\\GitHub\\restaurant-menu\\restaurant\\restaurant\\wwwroot\\IMGs\\sorbetti.jpg",
+      "PackagePath": "staticwebassets\\IMGs\\sorbetti.jpg"
+    },
+    {
+      "Id": "D:\\文件\\GitHub\\restaurant-menu\\restaurant\\restaurant\\wwwroot\\IMGs\\spaghetti-carbonara.jpg",
+      "PackagePath": "staticwebassets\\IMGs\\spaghetti-carbonara.jpg"
+    },
+    {
+      "Id": "D:\\文件\\GitHub\\restaurant-menu\\restaurant\\restaurant\\wwwroot\\IMGs\\spaghetti-tomato.jpg",
+      "PackagePath": "staticwebassets\\IMGs\\spaghetti-tomato.jpg"
+    },
+    {
       "Id": "D:\\文件\\GitHub\\restaurant-menu\\restaurant\\restaurant\\wwwroot\\IMGs\\udon.jpg",
       "PackagePath": "staticwebassets\\IMGs\\udon.jpg"
     },

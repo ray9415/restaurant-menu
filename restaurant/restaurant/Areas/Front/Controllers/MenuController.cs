@@ -16,7 +16,8 @@ namespace restaurant.Areas.Front.Controllers
         public IActionResult Menu()
         {
             //_context.Orders.Where(m => m.Id == 0).Select
-            return View();
+            var items = _context.Products.ToList();
+            return View(items);
         }
     }
 }
