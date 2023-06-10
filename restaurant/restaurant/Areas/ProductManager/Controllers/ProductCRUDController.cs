@@ -14,7 +14,7 @@ namespace restaurant.Areas.ProductManager.Controllers
         }
         public IActionResult Index() 
         { 
-            var result = _context.Products.ToList();
+            var result = _context.Products.OrderBy(m => m.Type).ToList();
             return View(result); 
         }
 
@@ -29,6 +29,23 @@ namespace restaurant.Areas.ProductManager.Controllers
             _context.Products.Add(product);
             _context.SaveChanges();
             return View();
+        }
+
+        public IActionResult Edit(int id) 
+        {
+            var product = _context.Products.Where(m => m.ProductId == id).FirstOrDefault();
+            return View(product);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Product product)
+        {
+            var modify = _context.Products.Where(m => m.ProductId == product.ProductId).FirstOrDefault();
+            modify.Name = product.Name;
+            modify.Description = product.Description;
+            modify.Price = product.Price;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
