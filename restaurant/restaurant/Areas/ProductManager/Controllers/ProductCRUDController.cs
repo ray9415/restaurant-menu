@@ -24,30 +24,7 @@ namespace restaurant.Areas.ProductManager.Controllers
             return View(result); 
         }
 
-        [HttpPost]//上傳檔案
-        public async Task <IActionResult> Upload(IFormFile file)
-        {
-            if(file == null || file.Length == 0)
-            {
-                return BadRequest(BadRequest());
-            }
-            var filename = file.FileName;
-            var filepath = Path.Combine(_environment.WebRootPath,@"\IMGs"+filename);
-            using (var stream = new FileStream(filepath, FileMode.Create))
-            {
-                await file.CopyToAsync(stream);
-            }
-            //檔名存入資料庫
-            if (!string.IsNullOrEmpty(filename))
-            {
-                _context.Products.Add(new Product{ IMG = filename});
-                _context.SaveChanges();
-            }                
-            return RedirectToAction("Index");
-
-        }
-
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             return View();
         }
@@ -55,10 +32,16 @@ namespace restaurant.Areas.ProductManager.Controllers
         [HttpPost]
         public async Task <IActionResult> Create(Product product , IFormFile file)
         {
-            await Upload(file);
-            _context.Products.Add(product);
+            //檔案上傳
+            string uploadpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/IMGs", file.FileName);
+            using (var stream = new FileStream(uploadpath, FileMode.Create))
+            {
+                await file.OpenReadStream().CopyToAsync(stream);
+            }
+            product.IMG = file.FileName;
+            _context.Products.Add(entity:product);
             _context.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
 
         public IActionResult Edit(int id) 
@@ -74,6 +57,19 @@ namespace restaurant.Areas.ProductManager.Controllers
             modify.Name = product.Name;
             modify.Description = product.Description;
             modify.Price = product.Price;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var p = _context.Products.Where(d => d.ProductId == id).FirstOrDefault(); 
+            return View(p);
+        }
+
+        public IActionResult Delete(Product p) 
+        {
+            _context.Products.Remove(p);
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

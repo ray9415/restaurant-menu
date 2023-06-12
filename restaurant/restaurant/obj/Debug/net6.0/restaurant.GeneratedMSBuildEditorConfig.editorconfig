@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
