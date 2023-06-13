@@ -12,11 +12,9 @@ namespace restaurant.Areas.ProductManager.Controllers
     public class ProductCRUDController : Controller
     {
         private readonly restaurantContext _context;
-        //private readonly IWebHostEnvironment _environment ;
-        public ProductCRUDController(restaurantContext context/*, IWebHostEnvironment environment*/)
+        public ProductCRUDController(restaurantContext context)
         {
             _context = context;
-            //_environment = environment;
         }
         public async Task<IActionResult> Index()
         {
@@ -25,30 +23,29 @@ namespace restaurant.Areas.ProductManager.Controllers
                         Problem("Entity set 'restaurantContext.Products'  is null.");
         }
 
-        //public IActionResult Index() 
-        //{ 
-        //    var result = _context.Products.OrderBy(m => m.Type).ToList();
-        //    return View(result); 
-        //}
-
         public async Task<IActionResult> Create()
         {
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task <IActionResult> Create(Product product , IFormFile file)
         {
-            //檔案上傳
-            string uploadpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/IMGs", file.FileName);
-            using (var stream = new FileStream(uploadpath, FileMode.Create))
+            if (ModelState.IsValid)
             {
-                await file.OpenReadStream().CopyToAsync(stream);
+                //檔案上傳
+                string uploadpath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/IMGs", file.FileName);
+                using (var stream = new FileStream(uploadpath, FileMode.Create))
+                {
+                    await file.OpenReadStream().CopyToAsync(stream);
+                }
+                product.IMG = file.FileName;
+                _context.Products.Add(product);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-            product.IMG = file.FileName;
-            _context.Products.Add(entity:product);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            return View(product);
         }
 
         public async Task<IActionResult> Details(int? id)
