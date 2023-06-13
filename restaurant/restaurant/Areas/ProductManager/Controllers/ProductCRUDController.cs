@@ -4,6 +4,7 @@ using System.Collections;
 using restaurant.Models;
 using restaurant.Data;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace restaurant.Areas.ProductManager.Controllers
 {
@@ -11,18 +12,24 @@ namespace restaurant.Areas.ProductManager.Controllers
     public class ProductCRUDController : Controller
     {
         private readonly restaurantContext _context;
-        private readonly IWebHostEnvironment _environment ;
-        public ProductCRUDController(restaurantContext context, IWebHostEnvironment environment)
+        //private readonly IWebHostEnvironment _environment ;
+        public ProductCRUDController(restaurantContext context/*, IWebHostEnvironment environment*/)
         {
             _context = context;
-            _environment = environment;
+            //_environment = environment;
+        }
+        public async Task<IActionResult> Index()
+        {
+            return _context.Products != null ?
+                        View(await _context.Products.ToListAsync()) :
+                        Problem("Entity set 'restaurantContext.Products'  is null.");
         }
 
-        public IActionResult Index() 
-        { 
-            var result = _context.Products.OrderBy(m => m.Type).ToList();
-            return View(result); 
-        }
+        //public IActionResult Index() 
+        //{ 
+        //    var result = _context.Products.OrderBy(m => m.Type).ToList();
+        //    return View(result); 
+        //}
 
         public async Task<IActionResult> Create()
         {
@@ -44,6 +51,22 @@ namespace restaurant.Areas.ProductManager.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null || _context.Products == null)
+                return NotFound();
+
+            var product = await _context.Products
+                .FirstOrDefaultAsync(m => m.ProductId == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
+
         public IActionResult Edit(int id) 
         {
             var product = _context.Products.Where(m => m.ProductId == id).FirstOrDefault();
@@ -61,17 +84,37 @@ namespace restaurant.Areas.ProductManager.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int? id)
         {
-            var p = _context.Products.Where(d => d.ProductId == id).FirstOrDefault(); 
+            if (id == null || _context.Products == null)
+            {
+                return NotFound();
+            }
+
+            var p =await _context.Products.FirstOrDefaultAsync(d => d.ProductId == id); 
+            if (p == null) 
+            {
+                return NotFound();
+            }
             return View(p);
         }
 
-        public IActionResult Delete(Product p) 
+        [HttpPost,ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirm(int? id) 
         {
-            _context.Products.Remove(p);
-            _context.SaveChanges();
-            return RedirectToAction("Index");
+            if (_context.Products == null)
+            {
+                return Problem("Entity set 'restaurantContext.Products'  is null.");
+            }
+            var product = await _context.Products.FindAsync(id);
+            if (product != null)
+            {
+                _context.Products.Remove(product);
+            }
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
     }
 }

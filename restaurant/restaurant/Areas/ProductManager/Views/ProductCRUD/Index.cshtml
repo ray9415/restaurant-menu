@@ -18,10 +18,10 @@
             <th>
                 @Html.DisplayNameFor(model => model.Type)
             </th>
-            <th>
+@*            <th>
                 @Html.DisplayNameFor(model => model.Description)
             </th>
-            <th>
+*@            <th>
                 @Html.DisplayNameFor(model => model.Price)
             </th>
             <th>
@@ -39,10 +39,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
-            <td>
+@*            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
-            <td>
+*@            <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
@@ -50,7 +50,7 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ProductId">編輯</a> |
-@*                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |*@
+                <a asp-action="Details" asp-route-id="@item.ProductId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.ProductId">刪除</a>
             </td>
         </tr>
