@@ -9,77 +9,81 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = restaurant
 build_property.RootNamespace = restaurant
-build_property.ProjectDir = D:\文件\GitHub\restaurant-menu\restaurant\restaurant\
+build_property.ProjectDir = P:\restaurant-menu\restaurant\restaurant\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\文件\GitHub\restaurant-menu\restaurant\restaurant
+build_property.MSBuildProjectDirectory = P:\restaurant-menu\restaurant\restaurant
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/Front/Views/Menu/Menu.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/Front/Views/Menu/Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnJvbnRcVmlld3NcTWVudVxNZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/Front/Views/Order/Index.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/Front/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnJvbnRcVmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/Front/Views/_ViewImports.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/Front/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnJvbnRcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/Front/Views/_ViewStart.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/Front/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRnJvbnRcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Create.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Delete.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Edit.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Index.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/_ViewImports.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/_ViewStart.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Home/Index.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Home/Privacy.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Shared/Error.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Shared/_ValidationScriptsPartial.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/_ViewImports.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/_ViewStart.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/文件/GitHub/restaurant-menu/restaurant/restaurant/Views/Shared/_Layout.cshtml]
+[P:/restaurant-menu/restaurant/restaurant/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2uhdyu96cf
