@@ -23,6 +23,11 @@ namespace restaurant.Areas.ProductManager.Controllers
                         Problem("Entity set 'restaurantContext.Products'  is null.");
         }
 
+        public async Task<IActionResult> Login()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Create()
         {
             return View();
