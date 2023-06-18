@@ -52,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/ProductCRUD/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcUHJvZHVjdENSVURcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [P:/restaurant-menu/restaurant/restaurant/Areas/ProductManager/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvZHVjdE1hbmFnZXJcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

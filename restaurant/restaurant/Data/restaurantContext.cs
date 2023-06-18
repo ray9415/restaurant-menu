@@ -9,8 +9,10 @@ namespace restaurant.Data
         public restaurantContext(DbContextOptions<restaurantContext> options):base(options)
         {
         }
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
