@@ -1099,3 +1099,4 @@ P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.Extensions.F
 P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 P:\restaurant-menu\restaurant\restaurant\obj\Debug\net6.0\restaurant.MvcApplicationPartsAssemblyInfo.cs
+P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
