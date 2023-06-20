@@ -1091,3 +1091,11 @@ P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\vi\Humanizer.resources
 P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\zh-CN\Humanizer.resources.dll
 P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\zh-Hans\Humanizer.resources.dll
 P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\zh-Hant\Humanizer.resources.dll
+P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+P:\restaurant-menu\restaurant\restaurant\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+P:\restaurant-menu\restaurant\restaurant\obj\Debug\net6.0\restaurant.MvcApplicationPartsAssemblyInfo.cs
