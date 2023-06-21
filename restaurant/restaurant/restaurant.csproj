@@ -7,9 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\ProductManager\Data\**" />
+    <Compile Remove="Areas\ProductManager\Models\**" />
     <Compile Remove="Migrations\ApplicationDb\**" />
+    <Content Remove="Areas\ProductManager\Data\**" />
+    <Content Remove="Areas\ProductManager\Models\**" />
     <Content Remove="Migrations\ApplicationDb\**" />
+    <EmbeddedResource Remove="Areas\ProductManager\Data\**" />
+    <EmbeddedResource Remove="Areas\ProductManager\Models\**" />
     <EmbeddedResource Remove="Migrations\ApplicationDb\**" />
+    <None Remove="Areas\ProductManager\Data\**" />
+    <None Remove="Areas\ProductManager\Models\**" />
     <None Remove="Migrations\ApplicationDb\**" />
   </ItemGroup>
 
@@ -28,8 +36,6 @@
   <ItemGroup>
     <Folder Include="Areas\Front\Data\" />
     <Folder Include="Areas\Front\Models\" />
-    <Folder Include="Areas\ProductManager\Data\" />
-    <Folder Include="Areas\ProductManager\Models\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

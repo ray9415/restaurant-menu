@@ -16,6 +16,7 @@ namespace restaurant.Areas.ProductManager.Controllers
         {
             _context = context;
         }
+
         public async Task<IActionResult> Index()
         {
             return _context.Products != null ?
@@ -26,6 +27,23 @@ namespace restaurant.Areas.ProductManager.Controllers
         public async Task<IActionResult> Login()
         {
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(string Name ,string Password)
+        {
+            var employee = _context.Employees.FirstOrDefault(e => e.Name == Name &&e.Password ==Password);
+            if(employee !=null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            ModelState.AddModelError(string.Empty ,"Invalid login attempt");
+            return View();
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            return RedirectToAction("Index", "Home");
         }
 
         public async Task<IActionResult> Create()
