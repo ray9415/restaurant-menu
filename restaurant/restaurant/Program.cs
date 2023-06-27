@@ -14,13 +14,13 @@ builder.Services.AddDbContext<ApplicationDbContext>(Options => Options
     .UseSqlServer(builder.Configuration.GetConnectionString("DBconnection")));
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 //    .AddEntityFrameworkStores<ApplicationDbContext>();
-//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-//    .AddCookie(Options =>
-//    {
-//        Options.LoginPath = "/Areas/ProductManager/ProductCRUD/Login";
-//        Options.AccessDeniedPath = "/Areas/ProductManager/ProductCRUD/AccessDenied";
-//    });
-//builder.Services.AddAuthorization();
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(Options =>
+    {
+        Options.LoginPath = "/ProductManager/ProductCRUD/Index";
+        //Options.AccessDeniedPath = "/Areas/ProductManager/ProductCRUD/AccessDenied";
+    });
+builder.Services.AddAuthorization();
 
 var app = builder.Build();
 

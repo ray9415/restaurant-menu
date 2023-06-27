@@ -5,10 +5,15 @@ using restaurant.Models;
 using restaurant.Data;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 
 namespace restaurant.Areas.ProductManager.Controllers
 {
     [Area("ProductManager")]
+    
     public class ProductCRUDController : Controller
     {
         private readonly restaurantContext _context;
@@ -17,6 +22,7 @@ namespace restaurant.Areas.ProductManager.Controllers
             _context = context;
         }
 
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return _context.Products != null ?
@@ -33,8 +39,15 @@ namespace restaurant.Areas.ProductManager.Controllers
         public async Task<IActionResult> Login(string Name ,string Password)
         {
             var employee = _context.Employees.FirstOrDefault(e => e.Name == Name &&e.Password ==Password);
-            if(employee !=null)
+            //登入驗證
+            if (employee != null)
             {
+                var claim = new List<Claim> 
+                { 
+                    new Claim(ClaimTypes.Name, employee.Name) 
+                }; 
+                var claimIdentity = new ClaimsIdentity(claim, CookieAuthenticationDefaults.AuthenticationScheme);
+                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimIdentity));
                 return RedirectToAction(nameof(Index));
             }
             ModelState.AddModelError(string.Empty ,"Invalid login attempt");
@@ -43,9 +56,11 @@ namespace restaurant.Areas.ProductManager.Controllers
 
         public async Task<IActionResult> Logout()
         {
+            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Home");
         }
 
+        [Authorize]
         public async Task<IActionResult> Create()
         {
             return View();
@@ -53,6 +68,7 @@ namespace restaurant.Areas.ProductManager.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task <IActionResult> Create(Product product , IFormFile file)
         {
             if (ModelState.IsValid)
@@ -71,6 +87,7 @@ namespace restaurant.Areas.ProductManager.Controllers
             return View(product);
         }
 
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Products == null)
@@ -87,6 +104,7 @@ namespace restaurant.Areas.ProductManager.Controllers
             return View(product);
         }
 
+        [Authorize]
         public IActionResult Edit(int id) 
         {
             var product = _context.Products.Where(m => m.ProductId == id).FirstOrDefault();
@@ -94,6 +112,7 @@ namespace restaurant.Areas.ProductManager.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public IActionResult Edit(Product product)
         {
             var modify = _context.Products.Where(m => m.ProductId == product.ProductId).FirstOrDefault();
@@ -104,6 +123,7 @@ namespace restaurant.Areas.ProductManager.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Products == null)
@@ -121,6 +141,7 @@ namespace restaurant.Areas.ProductManager.Controllers
 
         [HttpPost,ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirm(int? id) 
         {
             if (_context.Products == null)
