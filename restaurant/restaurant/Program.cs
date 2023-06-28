@@ -17,7 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(Options => Options
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(Options =>
     {
-        Options.LoginPath = "/ProductManager/ProductCRUD/Index";
+        Options.LoginPath = "/ProductManager/ProductCRUD/Login";
         //Options.AccessDeniedPath = "/Areas/ProductManager/ProductCRUD/AccessDenied";
     });
 builder.Services.AddAuthorization();
@@ -37,6 +37,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseCookiePolicy();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseEndpoints(endpoints =>

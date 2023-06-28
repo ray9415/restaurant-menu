@@ -1100,3 +1100,4 @@ P:\restaurant-menu\restaurant\restaurant\obj\Debug\net6.0\refint\restaurant.dll
 P:\restaurant-menu\restaurant\restaurant\obj\Debug\net6.0\restaurant.pdb
 P:\restaurant-menu\restaurant\restaurant\obj\Debug\net6.0\restaurant.genruntimeconfig.cache
 P:\restaurant-menu\restaurant\restaurant\obj\Debug\net6.0\ref\restaurant.dll
+P:\restaurant-menu\restaurant\restaurant\obj\Debug\net6.0\scopedcss\Views\Shared\Manage_Layout.cshtml.rz.scp.css
